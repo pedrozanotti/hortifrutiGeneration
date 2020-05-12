@@ -32,24 +32,29 @@
     <h3 class="text-center">Bem vindx a nossa loja</h3>
   </div>
 
+  <div class="col-md-12" *ngIf='alerta'>
+    <div class="alert alert-success text-center" role="alert" >
+        Postagem apagada com sucesso.
+      </div>
+    </div>
+
 
   <div class="card m-2" style="width: 25rem;" *ngFor="let produtos of listaProdutos">
-    <div class="card-header">
+    <div class="card-header text-center">
       <img src="{{produtos.imagem}}" alt="" width="200px" height="250px">
     </div>
-    <h5 class="card-tittle">
+    <h5 class="card-tittle text-center">
       {{produtos.nome}}
     </h5>
+    <div class="text-center">
     <p class="card-text">Código: {{produtos.id}}</p>
     <p class="card-text">Preço: R{{produtos.preco | currency}}</p>
     <p class="card-text">Quantidade no Estoque: {{produtos.qtdEstoque}}</p>
-    <button class="mr-3 btn btn-outline-info">
-      Editar
-    </button>
-
-    <button class="btn btn-outline-danger ml-3">
-      Apagar
-    </button>
+  </div>
+    <div class="mb-3 mt-3 text-center">
+      <button type="salvar" class="btn btn-primary mr-3" [routerLink] = "['/editar', produtos.id]">Editar</button>
+      <button type="cancelar" class="btn btn-danger" [routerLink] = "['/deletar', produtos.id]">Excluir</button>
+  </div>
   </div>
 
 

@@ -11,6 +11,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { EditarComponent } from './editar/editar.component';
+import { OrderModule } from 'ngx-order-pipe';
+import { DeletarComponent } from './deletar/deletar.component'
 
 @NgModule({
   declarations: [
@@ -19,14 +21,16 @@ import { EditarComponent } from './editar/editar.component';
     LojaComponent,
     NavbarComponent,
     FooterComponent,
-    EditarComponent
+    EditarComponent,
+    DeletarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    OrderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

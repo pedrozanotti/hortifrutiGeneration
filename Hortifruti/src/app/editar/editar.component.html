@@ -1,1 +1,37 @@
-<p>editar works!</p>
+<div class="container">
+  <div class="col-md-4">
+      <div class="card">
+          <img src="{{produtos.imagem}}" alt="Imagem do produto">
+      </div>
+  </div>
+
+  <div class="col-md-8">
+    <div>
+        <div class="form-group">
+          <label for="">Nome</label>
+          <input type="nome" class="form-control" id="nome" [(ngModel)]="produtos.nome">
+        </div>
+        <div class="form-group">
+          <label for="">Preço</label>
+          <input type="preço" class="form-control" id="preco" [(ngModel)]="produtos.preco">
+        </div>
+        <div class="form-group">
+          <label for="">Imagem</label>
+          <input type="imagem" class="form-control" id="imagem" [(ngModel)]="produtos.imagem">
+        </div>
+        <div class="form-group">
+          <label for="">Quantidade em estoque</label>
+          <input type="estoque" class="form-control" id="qtdEstoque" [(ngModel)]="produtos.qtdEstoque">
+        </div>
+    
+        <div class="mb-3 mt-3">
+        <button type="salvar" class="btn btn-primary mr-3" (click)="salvar()">Salvar</button>
+        <button type="cancelar" class="btn btn-danger" (click)="cancelar()">Cancelar</button>
+    </div>
+      </div>
+  </div>
+
+
+
+
+</div>

@@ -11,11 +11,17 @@ export class LojaComponent implements OnInit {
 
   listaProdutos: Produtos []
   produtos: Produtos = new Produtos
+  alerta:boolean = false
 
   constructor(private produtosService: ProdutosService) { }
 
   ngOnInit() {
     this.findAllProdutos()
+
+    let item:string = localStorage.getItem('delOk')
+    if (item == "true") {
+      this.alerta = true
+    }
   }
 
   findAllProdutos(){

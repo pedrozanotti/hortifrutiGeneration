@@ -1,0 +1,20 @@
+<div class="container">
+
+<div class="col-md-4">
+    <div class="card">
+        <img src="{{produtos.imagem}}" alt="Imagem do Produto">
+    </div>
+</div>
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">{{produtos.nome}}</div>
+            <div class="card-body">{{produtos.preco}}</div>
+            <h2>Deseja mesmo cancelar este produto?</h2>
+            <div class="mb-3 mt-3">
+                <button type="salvar" class="btn btn-primary mr-3" (click)="btnSim()">Sim</button>
+                <button type="cancelar" class="btn btn-danger" (click)="btnNao()">Não</button>
+            </div>
+        </div>
+    </div>
+
+</div>
